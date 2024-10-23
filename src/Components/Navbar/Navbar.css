@@ -1,13 +1,12 @@
 .navbar{
     width: 100%;
     background: transparent;
-    padding: 1em 6em;
-    position: fixed;
-    z-index: 9;
+    padding: 1em 0;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 160px;
 }
 
 .logo{
@@ -58,9 +57,16 @@ nav li{
 
 @media screen and (max-width: 900px){
     .navbar{
-        padding: 1em 1.5em; 
+        width: 100%;
+        background: transparent;
+        padding: 1em 0;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 80px;
     }
-
+    
     nav{
         display: none;
         gap: 40px;

@@ -4,7 +4,7 @@
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the image */
     padding: 80px 0;
-    padding-top: 200px;
+    padding-top: 0;
     transition: background-image ease-in 0.3s;
 }
 
@@ -145,7 +145,7 @@
         background-size: cover; /* Cover the entire container */
         background-position: center; /* Center the image */
         padding: 60px 0;
-        padding-top: 120px;
+        padding-top: 0;
         transition: background-image ease-in 0.3s;
     }
     
@@ -208,8 +208,8 @@
 
     .cta-item{
         background: rgba(128, 128, 126, 0.73);
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -232,6 +232,10 @@
         display: flex;
         justify-content: space-between;
         font-family: 'Aeonik-Regular';
+    }
+
+    .expo{
+        width: 100%;
     }
 
     .expo p{
