@@ -224,11 +224,12 @@
 
     .hero-nav{
         flex-direction: column;
-        gap: 60px;
+        gap: 40px;
         margin-top: 40px;
     }
 
     .expo-con{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         font-family: 'Aeonik-Regular';
