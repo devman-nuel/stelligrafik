@@ -10,9 +10,9 @@ function Footer() {
     <div className='footer'>
       <div className='footer-con'>
         <div className='footer-left'>
-          <p data-animation='paragraph'>About Us</p>
-          <p data-animation='paragraph'>Our Services</p>
-          <p data-animation='paragraph'>Our Projects</p>
+          <p data-animation='paragraph'>About</p>
+          <p data-animation='paragraph'>Services</p>
+          <p data-animation='paragraph'>Projects</p>
           <p data-animation='paragraph'>Contact</p>
         </div>
 

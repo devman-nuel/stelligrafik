@@ -101,7 +101,7 @@ function Hero() {
          </div>
         <div className='hero-con'>
           <h2 data-animation='header'>Designing a Greener Tomorrow, Today.</h2>
-          <p data-animation='paragraph'>Creating eco-friendly, sustainable design solutions that reduce environmental impact while maintaining creativity and innovation.</p>
+          <p >Creating eco-friendly, sustainable design solutions that reduce environmental impact while maintaining creativity and innovation.</p>
 
           <div className='hero-box' ref={heroBoxRef}>
             <div className='hero-cta'>
