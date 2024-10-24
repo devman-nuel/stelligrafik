@@ -128,6 +128,36 @@
     align-items: last baseline;
 }
 
+
+.scroll-to-top {
+    position: absolute; /* Positioning relative to the footer */
+    bottom: 80px; /* Distance from the bottom */
+    right: 100px; /* Distance from the right */
+    width: 50px; /* Width of the button */
+    height: 50px; /* Height of the button */
+    border-radius: 50%; /* Circular shape */
+    background-color: #00BE7B; /* Background color */
+    color: #fff; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #009B60; /* Darker shade on hover */
+  }
+  
+  /* Make sure to adjust the positioning in case the footer's padding/margin changes */
+  .footer {
+    position: relative; /* Relative positioning for the button */
+  }
+  
+
+
+
 @media screen and (max-width: 900px){
     .footer-con{
         flex-direction: column;
@@ -195,5 +225,22 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
+
+    .scroll-to-top {
+        position: absolute; /* Positioning relative to the footer */
+        bottom: 30px; /* Distance from the bottom */
+        right: 20px; /* Distance from the right */
+        width: 50px; /* Width of the button */
+        height: 50px; /* Height of the button */
+        border-radius: 50%; /* Circular shape */
+        background-color: #00BE7B; /* Background color */
+        color: #fff; /* Text color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer; /* Pointer cursor on hover */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+        transition: background-color 0.3s ease; /* Smooth background transition */
+      }
     
 }
