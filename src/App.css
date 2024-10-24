@@ -5,6 +5,19 @@
   box-sizing: border-box;
 }
 
+/* Hide scrollbar but allow scrolling */
+html, body {
+  overflow: -moz-scrollbars-none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  scrollbar-width: none;  /* For Firefox */
+
+  overflow-y: scroll; /* Allow vertical scrolling but hide the scrollbar */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and other WebKit browsers */
+}
+
 @font-face {
   font-family: 'Monument-Regular';
   src: url(./Fonts/Neue-montreal/MonumentExtended-Regular.otf) format('opentype');

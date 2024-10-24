@@ -4,7 +4,9 @@ import './Service.css';
 function Service() {
   return (
     <div className='service'>
-        <h2>Services we provide to help lead <strong>better green</strong> life.</h2>
+        <div className='service-header'>
+           <h2 data-animation='header'> <span>Services we provide to help lead <span className='coloured-text'>better green</span> life.</span></h2>
+        </div>
 
         <div className='service-con'>
             <div className='service-left'>

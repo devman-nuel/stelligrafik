@@ -5,7 +5,7 @@ function Hero() {
   // Use useMemo to memoize the images array so it's not recreated on every render
   const images = useMemo(() => [
     'https://res.cloudinary.com/dxnukbo0u/image/upload/v1729653175/2151729550_n0asjw.jpg',
-    'https://res.cloudinary.com/dxnukbo0u/image/upload/v1729653177/2151196455_e1k5im.jpg',
+    'https://res.cloudinary.com/dxnukbo0u/image/upload/v1729748832/2151801651_g2rwxj.jpg',
     'https://res.cloudinary.com/dxnukbo0u/image/upload/v1729653180/2151729575_syaihh.jpg'
   ], []);
 
@@ -54,7 +54,7 @@ function Hero() {
             </div>
          </div>
         <div className='hero-con'>
-          <h2>Designing a Greener Tomorrow, Today.</h2>
+          <h2 data-animation='header'>Designing a Greener Tomorrow, Today.</h2>
           <p>Creating eco-friendly, sustainable design solutions that reduce environmental impact while maintaining creativity and innovation.</p>
 
           <div className='hero-box'>

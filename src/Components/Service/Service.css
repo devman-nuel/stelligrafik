@@ -4,15 +4,21 @@
     color: #fff;
 }
 
-.service h2{
-    width: 50%;
+.service-header h2{
+    width: 46%;
     font-family: 'Monument-Regular';
     font-weight: 100;
     font-size: 2.2rem;
-    line-height: 54px;
+    line-height: 54px;  
 }
 
-.service h2 strong{
+.service-header span {
+    font-family: 'Monument-Regular';
+    font-weight: 100;
+    font-size: 2.2rem;
+}
+
+.coloured-text{
     font-family: 'Monument-Regular';
     font-weight: 100;
     font-size: 2.2rem;
@@ -112,20 +118,25 @@
         color: #fff;
     }
     
-    .service h2{
+    .service-header h2{
         width: 100%;
         font-family: 'Monument-Regular';
         font-weight: 100;
-        font-size: 1.5rem;
-        line-height: 39px;
-        text-align: center;
+        font-size: 1.8rem;
+        line-height: 42px;  
     }
     
-    .service h2 strong{
+    .service-header span {
         font-family: 'Monument-Regular';
-        font-size: 1.5rem;
-        line-height: 39px;
-        color: #00BE7B;  
+        font-weight: 100;
+        font-size: 1.8rem;
+    }
+    
+    .coloured-text{
+        font-family: 'Monument-Regular';
+        font-weight: 100;
+        font-size: 1.8rem;
+        color: #00BE7B;   
     }
     
     .service-con{
