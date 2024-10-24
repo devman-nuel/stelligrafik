@@ -40,7 +40,7 @@ function Hero() {
 
   // GSAP Animation
   useEffect(() => {
-    const animateElements = (entry) => {
+    const animateElements = (entry, observer) => {
       if (entry.isIntersecting) {
         gsap.fromTo(
           heroBoxRef.current, 
@@ -57,13 +57,17 @@ function Hero() {
           { y: 50, opacity: 0 }, 
           { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }
         );
+        
+        // Stop observing once the animation has been triggered
+        observer.unobserve(entry.target);
       }
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(animateElements);
+      entries.forEach(entry => animateElements(entry, observer));
     }, { threshold: 0.1 });
 
+    // Observe elements
     if (heroBoxRef.current) observer.observe(heroBoxRef.current);
     if (expoRef.current) observer.observe(expoRef.current);
     if (switchRef.current) observer.observe(switchRef.current);
@@ -146,6 +150,3 @@ function Hero() {
 }
 
 export default Hero;
-
-
-
