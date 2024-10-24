@@ -55,15 +55,15 @@ function Team() {
 
         <div className='team-con'>
           {/** Use refs for images */}
-          <div ref={el => (imageRefs.current[0] = el)}>
+          <div ref={el => (imageRefs.current[0] = el)} className="team-member">
             <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1729766263/2151202445_qz3aug.jpg' alt='Team Member 1' />
           </div>
 
-          <div ref={el => (imageRefs.current[1] = el)}>
+          <div ref={el => (imageRefs.current[1] = el)} className="team-member">
             <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1729766263/2149203576_tkdufu.jpg' alt='Team Member 2' />
           </div>
 
-          <div ref={el => (imageRefs.current[2] = el)}>
+          <div ref={el => (imageRefs.current[2] = el)} className="team-member">
             <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1729766263/2149328287_ouaadw.jpg' alt='Team Member 3' />
           </div>
         </div>

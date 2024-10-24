@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import './Project.css';
 import { gsap } from 'gsap';
 
-
 function Project() {
   const imageRefs = useRef([]); // Store refs for images in an array
   const observerRef = useRef(null); // Store the IntersectionObserver instance

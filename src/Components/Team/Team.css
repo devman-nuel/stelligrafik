@@ -20,6 +20,12 @@
   gap: 10px;
 }
 
+.team-member {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px); /* Move down */
+  transition: opacity 0.3s, transform 0.3s; /* Smooth transition */
+}
+
 .team-con img{
     width: 100%;
 }
