@@ -205,6 +205,10 @@
         border-right: none ; 
         border-bottom:1px solid #3f3f3f ;
     }
+
+    .footer-box p{
+        font-size: 20px;
+    }
     
     
 
