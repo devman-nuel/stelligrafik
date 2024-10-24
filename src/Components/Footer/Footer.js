@@ -64,7 +64,7 @@ function Footer() {
         </div>
 
         <div className='copyspan'>
-          <span>Copyright@plantura2024</span>
+          <span>Copyright@plantaura2024</span>
         </div>
       </div>
 
