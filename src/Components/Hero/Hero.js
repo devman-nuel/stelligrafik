@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import './Hero.css';
+import { gsap } from 'gsap';
 
 function Hero() {
   // Use useMemo to memoize the images array so it's not recreated on every render
@@ -12,7 +13,12 @@ function Hero() {
   const [activeImage, setActiveImage] = useState(images[0]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Function to handle image change (manual or auto) - using useCallback to prevent recreation on every render
+  // References for animated elements
+  const heroBoxRef = useRef(null);
+  const expoRef = useRef(null);
+  const switchRef = useRef(null);
+
+  // Function to handle image change (manual or auto)
   const changeImage = useCallback((index) => {
     setActiveImage(images[index]);
     setActiveIndex(index);
@@ -33,6 +39,46 @@ function Hero() {
     changeImage(index);
   };
 
+  // Intersection Observer for animations
+  useEffect(() => {
+    const animateElements = (entry) => {
+      if (entry.isIntersecting) {
+        // Animate hero box
+        gsap.fromTo(heroBoxRef.current, 
+          { y: 50, opacity: 0 }, 
+          { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }
+        );
+
+        // Animate expo section
+        gsap.fromTo(expoRef.current, 
+          { y: 50, opacity: 0 }, 
+          { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }
+        );
+
+        // Animate switch section
+        gsap.fromTo(switchRef.current, 
+          { y: 50, opacity: 0 }, 
+          { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }
+        );
+      }
+    };
+
+    // Create the observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(animateElements);
+    }, { threshold: 0.1 });
+
+    // Observe the target elements
+    if (heroBoxRef.current) observer.observe(heroBoxRef.current);
+    if (expoRef.current) observer.observe(expoRef.current);
+    if (switchRef.current) observer.observe(switchRef.current);
+
+    return () => {
+      // Disconnect the observer on cleanup
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className='hero' style={{ backgroundImage: `url(${activeImage})` }}>
       <div className='content'>
@@ -49,15 +95,15 @@ function Hero() {
             </nav>
 
             <div className='nav-btn'>
-            <span>Contact Us</span>
-            <button>Schedule Call</button>
+              <span>Contact Us</span>
+              <button>Schedule Call</button>
             </div>
          </div>
         <div className='hero-con'>
           <h2 data-animation='header'>Designing a Greener Tomorrow, Today.</h2>
-          <p>Creating eco-friendly, sustainable design solutions that reduce environmental impact while maintaining creativity and innovation.</p>
+          <p data-animation='paragraph'>Creating eco-friendly, sustainable design solutions that reduce environmental impact while maintaining creativity and innovation.</p>
 
-          <div className='hero-box'>
+          <div className='hero-box' ref={heroBoxRef}>
             <div className='hero-cta'>
                 <div className='cta-item' >
                     <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1729668307/icons8-house-64_cjzirt.png' alt=''></img>
@@ -84,7 +130,7 @@ function Hero() {
         </div>
 
         <div className='hero-nav'>
-          <div className='expo-con'>
+          <div className='expo-con' ref={expoRef}>
             <div className='expo'>
               <p>42+</p>
               <span>Green Projects</span>
@@ -96,7 +142,7 @@ function Hero() {
             </div>
           </div>
 
-          <div className='switch'>
+          <div className='switch' ref={switchRef}>
             {images.map((image, index) => (
               <img
                 key={index}
@@ -114,3 +160,4 @@ function Hero() {
 }
 
 export default Hero;
+

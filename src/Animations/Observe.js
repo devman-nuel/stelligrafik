@@ -3,7 +3,8 @@ export const IO = (item, options) => {
         const observer = new window.IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    resolve();
+                    resolve(entry);  // Resolve with entry for more info
+                    observer.disconnect();  // Disconnect to avoid memory leak
                 }
             });
         }, options);

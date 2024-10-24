@@ -6,10 +6,10 @@ function Footer() {
     <div className='footer'>
       <div className='footer-con'>
          <div className='footer-left'>
-            <p>About Us</p>
-            <p>Our Services</p>
-            <p> Our Projects</p>
-            <p>Contact</p>
+            <p data-animation='paragraph'>About Us</p>
+            <p data-animation='paragraph'>Our Services</p>
+            <p data-animation='paragraph'> Our Projects</p>
+            <p data-animation='paragraph'>Contact</p>
          </div>
 
          <div className='footer-right'>
@@ -18,7 +18,7 @@ function Footer() {
                 <p>LOCATION</p>
 
                 <div>
-                  <span>2118 Thornridge Cir. Syracuse, Connecticut 35624, Miami, Florida.</span>
+                  <span>308 Lawrence Ville, SpringBottom, Atlanta Georgia, USA.</span>
                 </div>
 
                 <button>Get in touch</button>
