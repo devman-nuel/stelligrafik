@@ -124,6 +124,7 @@
         font-weight: 100;
         font-size: 1.8rem;
         line-height: 42px;  
+        text-align: center;
     }
     
     .service-header span {
